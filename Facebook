@@ -1,0 +1,36 @@
+# Facebook
+# Ensure all traffic goes through the specified proxy
+
+# Process Names
+# These are the main process names for Facebook.
+# If Facebook uses any other executables or additional processes, include them as well.
+#PROCESS-NAME,Facebook.exe
+#PROCESS-NAME,com.facebook.katana  # Facebook Android app
+#PROCESS-NAME,com.facebook.lite  # Facebook Lite Android app
+#PROCESS-NAME,com.facebook.orca  # Facebook Messenger Android app
+
+# Domain Suffixes
+# These include common Facebook domains and subdomains related to their service.
+DOMAIN-SUFFIX,facebook.com
+DOMAIN-SUFFIX,fb.com
+DOMAIN-SUFFIX,fbcdn.net
+DOMAIN-SUFFIX,cdn.fbcdn.net
+DOMAIN-SUFFIX,facebook.net
+DOMAIN-SUFFIX,instagram.com  # Instagram is owned by Facebook, so this is relevant as well
+DOMAIN-SUFFIX,messenger.com  # For Facebook Messenger
+DOMAIN-SUFFIX,api.facebook.com  # API endpoints for Facebook
+DOMAIN-SUFFIX,upload.facebook.com  # Facebook file upload services
+
+# IP CIDR Ranges
+# Add Facebook's IP ranges to ensure all communication through your proxy.
+IP-CIDR,31.13.64.0/18,no-resolve  # General Facebook IP range
+IP-CIDR,157.240.0.0/16,no-resolve  # Another major Facebook IP range
+IP-CIDR,69.171.224.0/20,no-resolve  # Facebook owned IP range
+IP-CIDR,69.171.250.0/24,no-resolve  # Specific Facebook server IP range
+IP-CIDR,173.252.64.0/18,no-resolve  # Facebook CDN and media IP range
+IP-CIDR,66.220.144.0/20,no-resolve  # Facebook-related IP range
+
+# IPv6 CIDR Ranges
+IP-CIDR6,2a03:2880:f12f:830::/64,no-resolve  # IPv6 Facebook server range
+IP-CIDR6,2a03:2880:f00d:830::/64,no-resolve
+IP-CIDR6,2a03:2880:f00d:831::/64,no-resolve
