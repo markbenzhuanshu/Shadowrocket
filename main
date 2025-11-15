@@ -85,12 +85,12 @@ RULE-SET,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/OneDrive
 RULE-SET,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Microsoft.list, Ⓜ️ 微软服务, update-interval = 86400
 RULE-SET,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Apple.list, 🍎 苹果服务, update-interval = 86400
 # >> 社交媒体
-RULE-SET,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Telegram.list, 📲 电报消息, update-interval = 86400
+RULE-SET,https://raw.githubusercontent.com/markbenzhuanshu/Shadowrocket/refs/heads/main/telegram, 📲 电报消息, update-interval = 86400
 RULE-SET,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/OpenAi.list, 💬 OpenAI, update-interval = 86400
-RULE-SET,https://raw.githubusercontent.com/markbenzhuanshu/Shadowrocket/refs/heads/Facebook/WhatsApp, ☎️ WhatsApp, update-interval = 86400
-RULE-SET,https://raw.githubusercontent.com/markbenzhuanshu/Shadowrocket/refs/heads/Facebook/Facebook, 📡 facebook, update-interval = 86400
-RULE-SET,https://raw.githubusercontent.com/markbenzhuanshu/Shadowrocket/refs/heads/Facebook/ins, 🧰 instagram, update-interval = 86400
-RULE-SET,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Telegram.list, 💣 tiktok, update-interval = 86400
+RULE-SET,https://raw.githubusercontent.com/markbenzhuanshu/Shadowrocket/refs/heads/main/WhatsApp, ☎️ WhatsApp, update-interval = 86400
+RULE-SET,https://raw.githubusercontent.com/markbenzhuanshu/Shadowrocket/refs/heads/main/Facebook, 📡 facebook, update-interval = 86400
+RULE-SET,https://raw.githubusercontent.com/markbenzhuanshu/Shadowrocket/refs/heads/main/Instagram, 🧰 instagram, update-interval = 86400
+RULE-SET,https://raw.githubusercontent.com/markbenzhuanshu/Shadowrocket/refs/heads/main/tiktok, 💣 tiktok, update-interval = 86400
 # >> 流媒体音视频
 RULE-SET,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/YouTube.list, 📹 油管视频, update-interval = 86400
 RULE-SET,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Netflix.list, 🎥 奈飞视频, update-interval = 86400
