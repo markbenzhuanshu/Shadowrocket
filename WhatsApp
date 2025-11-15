@@ -1,0 +1,27 @@
+# WhatsApp
+# Ensure all traffic goes through the specified proxy
+# Process Names
+# These are the main process names for WhatsApp.
+# If WhatsApp uses any other executables or additional processes, include them as well.
+#PROCESS-NAME,WhatsApp.exe
+#PROCESS-NAME,com.whatsapp  # Android WhatsApp app
+#PROCESS-NAME,com.whatsapp.messenger  # WhatsApp Messenger app (Android or iOS)
+# Domain Suffixes
+# These include common WhatsApp domains and subdomains related to their service.
+DOMAIN-SUFFIX,whatsapp.com
+DOMAIN-SUFFIX,whatsapp.net
+DOMAIN-SUFFIX,web.whatsapp.com
+DOMAIN-SUFFIX,whatsappweb.com
+DOMAIN-SUFFIX,api.whatsapp.com  # API endpoints for WhatsApp
+DOMAIN-SUFFIX,upload.whatsapp.com  # WhatsApp file upload services
+# IP CIDR Ranges
+# Add WhatsApp's IP ranges to ensure all communication through your proxy.
+IP-CIDR,185.82.216.0/22,no-resolve  # WhatsApp server IP range
+IP-CIDR,69.171.255.0/24,no-resolve  # Facebook's server range, used by WhatsApp
+IP-CIDR,31.13.88.0/22,no-resolve  # Another WhatsApp-related IP range
+IP-CIDR,199.36.158.0/22,no-resolve  # WhatsApp media server IP range
+IP-CIDR,104.244.42.0/24,no-resolve  # WhatsApp service IP range
+# IPv6 CIDR Ranges
+IP-CIDR6,2a03:2880:f12f:830::/64,no-resolve  # Facebook-owned IPv6 range, used by WhatsApp
+IP-CIDR6,2a03:2880:f00d:830::/64,no-resolve
+IP-CIDR6,2a03:2880:f00d:831::/64,no-resolve
