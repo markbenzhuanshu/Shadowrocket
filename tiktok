@@ -1,0 +1,28 @@
+# TikTok
+# Ensure all traffic goes through the specified proxy
+# Process Names
+# These are the main process names for TikTok.
+# If TikTok uses any other executables or additional processes, include them as well.
+#PROCESS-NAME,TikTok.exe
+#PROCESS-NAME,com.zhiliaoapp.musically  # TikTok Android app
+#PROCESS-NAME,com.ss.android.ugc.trill  # TikTok Android app (International version)
+# Domain Suffixes
+# These include common TikTok domains and subdomains related to their service.
+DOMAIN-SUFFIX,tiktok.com
+DOMAIN-SUFFIX,tiktokcdn.com
+DOMAIN-SUFFIX,tiktokv.com
+DOMAIN-SUFFIX,ttvnw.net
+DOMAIN-SUFFIX,musical.ly  # Historical domain for TikTok's predecessor
+DOMAIN-SUFFIX,bytedance.com  # TikTok's parent company
+DOMAIN-SUFFIX,pixlee.com  # Related to TikTok services
+# IP CIDR Ranges
+# Add TikTok's IP ranges to ensure all communication through your proxy.
+IP-CIDR,23.39.42.0/24,no-resolve  # TikTok general IP range
+IP-CIDR,103.244.252.0/22,no-resolve  # TikTok media server IP range
+IP-CIDR,199.232.160.0/22,no-resolve  # TikTok related server IP range
+IP-CIDR,137.221.105.0/24,no-resolve  # Additional TikTok server range
+IP-CIDR,104.244.42.0/24,no-resolve  # TikTok service IP range
+# IPv6 CIDR Ranges
+IP-CIDR6,2606:2800:220:1:248:1893:25c8:1946/64,no-resolve  # TikTok IPv6 range
+IP-CIDR6,2a03:2880:f12f:830::/64,no-resolve  # IPv6 range related to TikTok (via Bytedance infrastructure)
+IP-CIDR6,2a03:2880:f00d:830::/64,no-resolve
