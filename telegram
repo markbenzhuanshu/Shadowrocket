@@ -1,0 +1,30 @@
+# Instagram
+# Ensure all traffic goes through the specified proxy
+# Process Names
+# These are the main process names for Instagram.
+# If Instagram uses any other executables or additional processes, include them as well.
+#PROCESS-NAME,Instagram.exe
+#PROCESS-NAME,com.instagram.android  # Android Instagram app
+#PROCESS-NAME,com.instagram.ios  # iOS Instagram app
+# Domain Suffixes
+# These include common Instagram domains and subdomains related to their service.
+DOMAIN-SUFFIX,instagram.com
+DOMAIN-SUFFIX,instagram.net
+DOMAIN-SUFFIX,fbcdn.net
+DOMAIN-SUFFIX,cdninstagram.com
+DOMAIN-SUFFIX,instagrammedia.com
+DOMAIN-SUFFIX,static.instagram.com
+DOMAIN-SUFFIX,api.instagram.com
+DOMAIN-SUFFIX,upload.instagram.com
+# IP CIDR Ranges
+# Add Instagram's IP ranges to ensure all communication through your proxy.
+IP-CIDR,31.13.64.0/18,no-resolve  # Instagram general IP range
+IP-CIDR,157.240.0.0/16,no-resolve  # Another major Instagram server range
+IP-CIDR,69.171.224.0/20,no-resolve  # Facebook/Instagram server range
+IP-CIDR,69.171.250.0/24,no-resolve  # Specific Instagram server IP range
+IP-CIDR,173.252.64.0/18,no-resolve  # Instagram CDN and media IP range
+IP-CIDR,66.220.144.0/20,no-resolve  # Facebook/Instagram-related IP range
+# IPv6 CIDR Ranges
+IP-CIDR6,2a03:2880:f12f:830::/64,no-resolve  # IPv6 Instagram server range
+IP-CIDR6,2a03:2880:f00d:830::/64,no-resolve
+IP-CIDR6,2a03:2880:f00d:831::/64,no-resolve
