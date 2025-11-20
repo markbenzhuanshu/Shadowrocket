@@ -1,4 +1,4 @@
-[neral]
+[General]
 # > 基础设置
 bypass-system = true
 skip-proxy = 192.168.0.0/16, 10.0.0.0/8, 172.16.0.0/12, localhost, *.local, captive.apple.com
@@ -16,15 +16,15 @@ dns-direct-fallback-proxy = true
 [Proxy Group]
 # > 策略组
 # >> 自动测速
-♻️ 自动选择 = url-test, tolerance = 50, policy-rex-filter = .
+♻️ 自动选择 = url-test, tolerance = 50, policy-regex-filter = .
 # >> 手动选择 
-🚀 手动切换 = select, policy-rex-filter = .
+🚀 手动切换 = select, policy-regex-filter = .
 🚀 节点选择 = select, ♻️ 自动选择, 🚀 手动切换, zj zijian-US, 🇭🇰 香港节点, 🇼🇸 台湾节点, 🇯🇵 日本节点, 🇸🇬 狮城节点, 🇺🇲 美国节点, 🇬🇧 英国节点, 🇲🇾 马来节点, DIRECT 
 # >> 分流策略 
 📲 电报消息 = select, 专用72.189-yan, zj zijian-US, 🚀 节点选择, 🚀 手动切换
    Meta = = select, 专用72.189-yan, zj zijian-US, 🚀 节点选择, 🚀 手动切换
-   TikTok == select, 专用72.189-yan, 🚀 手动切换, 🚀 节点选择, 🇼🇸 台湾节点, 🇯🇵 日本节点, 🇸🇬 狮城节点, 🇺🇲 美国节点, 🇬🇧 英国节点, 🇲🇾 马来节点, 🇲🇾 马来节点, zj zijian-US
-   Talkatone = select, 专用72.189-yan, zj zijian-US, 🚀 节点选择, 🚀 手动切换
+   TikTok == select, zj zijian-US, 专用72.189-yan, 🚀 手动切换, 🚀 节点选择, 🇼🇸 台湾节点, 🇯🇵 日本节点, 🇸🇬 狮城节点, 🇺🇲 美国节点, 🇬🇧 英国节点, 🇲🇾 马来节点
+   Talkatone = select, zj zijian-US, 72.189-yan, 🚀 节点选择, 🚀 手动切换
 💬 OpenAI = select, ♻️ 自动选择, 🚀 手动切换, 🚀 节点选择, zj zijian-US, 🇭🇰 香港节点, 🇼🇸 台湾节点, 🇯🇵 日本节点, 🇸🇬 狮城节点, 🇺🇲 美国节点, 🇬🇧 英国节点, 🇲🇾 马来节点 
 # >> 流媒体策略 
 📹 油管视频 = select, ♻️ 自动选择, 🚀 手动切换, 🚀 节点选择, zj zijian-US, 🇭🇰 香港节点, 🇼🇸 台湾节点, 🇯🇵 日本节点, 🇸🇬 狮城节点, 🇺🇲 美国节点, 🇬🇧 英国节点, 🇲🇾 马来节点
@@ -47,13 +47,13 @@ dns-direct-fallback-proxy = true
 🐟 漏网之鱼 = select, ♻️ 自动选择, 🚀 手动切换, zj zijian-US, 🇭🇰 香港节点, 🇼🇸 台湾节点, 🇯🇵 日本节点, 🇸🇬 狮城节点, 🇺🇲 美国节点, 🇬🇧 英国节点, 🇲🇾 马来节点, DIRECT 
 
 # > 地域分组
-🇭🇰 香港节点 = url-test, tolerance = 50, policy-rex-filter = (🇭🇰)|(港)|(Hong)|(HK) 
-🇼🇸 台湾节点 = url-test, tolerance = 50, policy-rex-filter = (🇼🇸)|(台)|(Tai)|(TW) 
-🇯🇵 日本节点 = url-test, tolerance = 50, policy-rex-filter = (🇯🇵)|(日)|(Japan)|(JP) 
-🇸🇬 狮城节点 = url-test, tolerance = 50, policy-rex-filter = (🇸🇬)|(新)|(Singapore)|(SG)|(zijian-SG)  
-🇺🇲 美国节点 = url-test, tolerance = 50, policy-rex-filter = (🇺🇸)|(美)|(States)|(US)|(zijian-US) 
-🇬🇧 英国节点 = url-test, tolerance = 50, policy-rex-filter = (🇬🇧)|(英)|(Kingdom)|(UK) 
-🇲🇾 马来节点 = url-test, tolerance = 50, policy-rex-filter = (🇲🇾)|(马)|(Malaysia)|(MA) 
+🇭🇰 香港节点 = url-test, tolerance = 50, policy-regex-filter = (🇭🇰)|(港)|(Hong)|(HK) 
+🇼🇸 台湾节点 = url-test, tolerance = 50, policy-regex-filter = (🇼🇸)|(台)|(Tai)|(TW) 
+🇯🇵 日本节点 = url-test, tolerance = 50, policy-regex-filter = (🇯🇵)|(日)|(Japan)|(JP) 
+🇸🇬 狮城节点 = url-test, tolerance = 50, policy-regex-filter = (🇸🇬)|(新)|(Singapore)|(SG)|(zijian-SG)  
+🇺🇲 美国节点 = url-test, tolerance = 50, policy-regex-filter = (🇺🇸)|(美)|(States)|(US)|(zijian-US) 
+🇬🇧 英国节点 = url-test, tolerance = 50, policy-regex-filter = (🇬🇧)|(英)|(Kingdom)|(UK) 
+🇲🇾 马来节点 = url-test, tolerance = 50, policy-regex-filter = (🇲🇾)|(马)|(Malaysia)|(MA) 
 # >> 多地域组合
 🗺️ Non-HK = url-test, tolerance = 50, 🇼🇸 台湾节点, 🇯🇵 日本节点, 🇸🇬 狮城节点, 🇺🇲 美国节点, 🇬🇧 英国节点, 🇲🇾 马来节点 
 🌏 Asia = url-test, tolerance = 50, 🇭🇰 香港节点, 🇼🇸 台湾节点, 🇯🇵 日本节点, 🇸🇬 狮城节点, 🇲🇾 马来节点 
@@ -110,8 +110,8 @@ RULE-SET,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyMed
 # >> 代理规则
 RULE-SET,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyGFWlist.list, 🚀 节点选择, update-interval = 86400
 RULE-SET,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Download.list, 🎯 全球直连, update-interval = 86400
-# > oIP China
-OIP,CN, 🎯 全球直连,no-resolve
+# > GeoIP China
+GEOIP,CN, 🎯 全球直连,no-resolve
 # > 兜底规则
 FINAL, 🐟 漏网之鱼
 
