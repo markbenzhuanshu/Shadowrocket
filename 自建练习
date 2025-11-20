@@ -126,12 +126,14 @@ udp-policy-not-supported-behaviour = REJECT
 
 # VLESS类型：
 # 节点名称=vless,地址,端口,password=密码,tls=true,其他参数(如obfs=websocket,peer=example.com)
+vless://789f3801-003b-4ecb-83e7-df9ee80dd142@cdns.doon.eu.org:443?encryption=none&security=tls&sni=zjjd.chdl88.top&fp=firefox&type=ws&host=zjjd.chdl88.top&path=%2Fvless-argo%3Fed%3D2560#zijian-US-Railway
 
 # HTTP/HTTPS/Socks5/Socks5 Over TLS等类型：
 # 节点名称=http,地址,端口,用户,密码
 # 节点名称=https,地址,端口,用户,密码
 # 节点名称=socks5,地址,端口,用户,密码
 # 节点名称=socks5-tls,地址,端口,用户,密码,skip-common-name-verify=true
+US-FBsk5==socks5,sg-iepl.com,58963,KupfuLsf6h,nniCX5ujO5
 
 # Trojan类型：
 # 节点名称=trojan,地址,端口,password=密码,其他参数(如allowInsecure=1,peer=example.com)
@@ -282,12 +284,12 @@ RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/r
 RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Gemini/Gemini.list,AI
 RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/OpenAI/OpenAI.list,AI
 RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Sony/Sony.list,游戏平台
-RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Nintendo/Nintendo.list,游戏平台
-RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Epic/Epic.list,游戏平台
-RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/SteamCN/SteamCN.list,游戏平台
-RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Steam/Steam.list,游戏平台
-RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Game/Game.list,游戏平台
-RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/GitHub/GitHub.list,PROXY
+#RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Nintendo/Nintendo.list,游戏平台
+#RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Epic/Epic.list,游戏平台
+#RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/SteamCN/SteamCN.list,游戏平台
+#RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Steam/Steam.list,游戏平台
+#RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Game/Game.list,游戏平台
+#RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/GitHub/GitHub.list,PROXY
 RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Microsoft/Microsoft.list,微软服务
 RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Google/Google.list,谷歌服务
 RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/TikTok/TikTok.list,TIKTOK
