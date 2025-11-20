@@ -91,7 +91,7 @@ RULE-SET,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Apple.li
 RULE-SET,https://raw.githubusercontent.com/markbenzhuanshu/Shadowrocket/refs/heads/main/Telegram.list, 📲 电报消息, update-interval = 86400
 RULE-SET,https://raw.githubusercontent.com/markbenzhuanshu/Shadowrocket/refs/heads/main/Meta.list,  Meta, update-interval = 86400
 RULE-SET,https://raw.githubusercontent.com/markbenzhuanshu/Shadowrocket/refs/heads/main/TikTok.list,  TikTok, update-interval = 86400
-RULE-SET,https://raw.githubusercontent.com/markbenzhuanshu/Shadowrocket/refs/heads/main/TikTok.list,  Talkatone, update-interval = 86400
+RULE-SET,https://raw.githubusercontent.com/markbenzhuanshu/Shadowrocket/refs/heads/main/Talkatone.list,  Talkatone, update-interval = 86400
 RULE-SET,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/OpenAi.list, 💬 OpenAI, update-interval = 86400
 # >> 流媒体音视频
 RULE-SET,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/NetEaseMusic.list, 🎶 网易音乐, update-interval = 86400
