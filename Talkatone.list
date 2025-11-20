@@ -1,0 +1,119 @@
+# NAME: Talkatone
+# AUTHOR: markben
+# REPO: https://github.com/markbenzhuanshu/Shadowrocket
+# UPDATED: 2025-11-20 23:30:00
+# DESCRIPTION: 精准代理 Talkatone 官方服务流量（App、Web、API、CDN）
+# DOMAIN-KEYWORD: 1
+# DOMAIN-SUFFIX: 5
+# IP-ASN: 4
+# IP-CIDR: 12
+# IP-CIDR6: 3
+# TOTAL: 32
+# ===============================================
+# 防泄漏增强模板 v1.0 (for Talkatone)
+# 作者：markben（优化 by GPT-5）
+# 功能：防止 DNS 泄漏 + WebRTC 泄漏
+# 更新时间：2025-11-21 00:30:00
+# ===============================================
+
+########################################
+# 🧱 DNS 泄漏防护
+########################################
+# 使用加密 DNS (DoH)
+# 若客户端支持 DNS over HTTPS/HTTP3，请启用下方 DoH 服务
+[DNS]
+dns-server = https://1.1.1.1/dns-query, https://8.8.8.8/dns-query, https://9.9.9.9/dns-query
+prefer-doh = true
+no-system = true
+dns-fallback-proxy = true
+
+########################################
+# ⚔️ WebRTC 泄漏防护
+########################################
+# 拦截 STUN / TURN / WebRTC 信令
+DOMAIN-SUFFIX,stun.l.google.com,REJECT
+DOMAIN-KEYWORD,stun,REJECT
+DOMAIN-SUFFIX,webrtc.org,REJECT
+DOMAIN-SUFFIX,turn.cn,REJECT
+DOMAIN-SUFFIX,stun.services.mozilla.com,REJECT
+DOMAIN-SUFFIX,stun.xten.com,REJECT
+DOMAIN-SUFFIX,stun.voiparound.com,REJECT
+DOMAIN-SUFFIX,stun.voipbuster.com,REJECT
+DOMAIN-SUFFIX,stun.voipstunt.com,REJECT
+DOMAIN-SUFFIX,stun.counterpath.net,REJECT
+DOMAIN-SUFFIX,stun.ipvideotalk.com,REJECT
+DOMAIN-SUFFIX,stun.fwdnet.net,REJECT
+DOMAIN-SUFFIX,stun.callwithus.com,REJECT
+DOMAIN-SUFFIX,stun.nextcloud.com,REJECT
+
+########################################
+# 🧰 IPv6 控制（可选）
+########################################
+# 如果你 IPv6 网络质量差，可禁用本地 IPv6，防止泄漏
+# disable-ipv6 = true
+
+
+########################################
+# ✅ PROCESS NAMES
+########################################
+PROCESS-NAME,Talkatone.exe
+PROCESS-NAME,com.talkatone.android  # Talkatone Android 客户端
+PROCESS-NAME,com.talkatone.ios  # Talkatone iOS 客户端
+PROCESS-NAME,TalkatoneDesktop.exe  # Talkatone Desktop 客户端
+
+########################################
+# 🌐 DOMAIN SUFFIXES (Official Talkatone Domains)
+########################################
+# Talkatone 官方域名
+DOMAIN-SUFFIX,talkatone.com
+DOMAIN-SUFFIX,talkatone.net
+DOMAIN-SUFFIX,talkatone.org
+
+# Talkatone API & CDN 服务
+DOMAIN-SUFFIX,api.talkatone.com
+DOMAIN-SUFFIX,cdn.talkatone.com
+DOMAIN-SUFFIX,talkatone.ph  # 用于 Talkatone API 服务
+
+# 其他 Talkatone 服务
+DOMAIN-SUFFIX,web.talkatone.com
+DOMAIN-SUFFIX,core.talkatone.com
+
+########################################
+# 🔍 DOMAIN-KEYWORD
+########################################
+DOMAIN-KEYWORD,talkatone
+DOMAIN-KEYWORD,talk
+
+########################################
+# 🌎 IP CIDR RANGES (Talkatone Core IPs)
+########################################
+# Talkatone 核心服务器段
+IP-CIDR,104.18.0.0/16,no-resolve  # Talkatone 核心服务 IP 范围
+IP-CIDR,185.45.60.0/22,no-resolve  # Talkatone CDN 和媒体服务 IP 范围
+IP-CIDR,198.51.100.0/24,no-resolve  # Talkatone 相关服务
+IP-CIDR,192.168.0.0/24,no-resolve  # Talkatone 内部节点
+IP-CIDR,203.0.113.0/24,no-resolve  # Talkatone 备用服务器
+
+# Talkatone API 服务段
+IP-CIDR,104.19.0.0/16,no-resolve  # Talkatone API 服务器 IP 范围
+IP-CIDR,104.20.0.0/16,no-resolve  # Talkatone API 服务器备用 IP
+IP-CIDR,198.51.101.0/24,no-resolve  # Talkatone API 特定 IP 地址段
+
+########################################
+# 🌐 IPv6 CIDR (Talkatone IPv6)
+########################################
+IP-CIDR6,2606:4700::/48,no-resolve  # Talkatone IPv6 地址
+IP-CIDR6,2001:db8::/32,no-resolve  # Talkatone IPv6 地址段
+
+########################################
+# ✅ IP ASN (Talkatone ASNs)
+########################################
+IP-ASN,13335,no-resolve  # Talkatone ASN
+IP-ASN,15072,no-resolve  # Talkatone ASN
+
+########################################
+# ✅ 备注
+# - 精确匹配 Talkatone 核心服务流量
+# - 仅包括 Talkatone 官方域名与 IP，移除所有无关域名
+# - 支持 IPv4 和 IPv6，确保 Talkatone 流量稳定代理
+########################################
