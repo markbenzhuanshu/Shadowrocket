@@ -1,0 +1,119 @@
+# NAME: Meta Suite
+# AUTHOR: markben 
+# REPO: https://github.com/markbenzhuanshu/Shadowrocket
+# UPDATED: 2025-11-20 23:00:00
+# DESCRIPTION: 精准代理 Meta 生态服务流量（Instagram, Facebook, WhatsApp, Threads）
+# DOMAIN-KEYWORD: 2
+# DOMAIN-SUFFIX: 35
+# IP-ASN: 2
+# IP-CIDR: 15
+# IP-CIDR6: 5
+# TOTAL: 58
+
+########################################
+# ✅ PROCESS NAMES
+########################################
+PROCESS-NAME,Instagram.exe
+PROCESS-NAME,com.instagram.android
+PROCESS-NAME,com.instagram.ios
+PROCESS-NAME,com.facebook.katana  # Facebook 主应用
+PROCESS-NAME,com.whatsapp  # WhatsApp 应用
+PROCESS-NAME,com.threads.android  # Threads 应用
+PROCESS-NAME,com.facebook.messenger  # Messenger 应用
+PROCESS-NAME,com.fb.messenger  # Messenger 独立应用
+
+########################################
+# 🌐 DOMAIN SUFFIXES (Meta Official)
+########################################
+# Instagram 相关域名
+DOMAIN-SUFFIX,instagram.com
+DOMAIN-SUFFIX,instagram.net
+DOMAIN-SUFFIX,cdninstagram.com
+DOMAIN-SUFFIX,instagramcdn.com
+DOMAIN-SUFFIX,instagrammedia.com
+DOMAIN-SUFFIX,fbcdn.net
+DOMAIN-SUFFIX,upload.instagram.com
+DOMAIN-SUFFIX,api.instagram.com
+DOMAIN-SUFFIX,graph.instagram.com
+DOMAIN-SUFFIX,meta.com
+
+# Facebook 相关域名
+DOMAIN-SUFFIX,facebook.com
+DOMAIN-SUFFIX,facebook.net
+DOMAIN-SUFFIX,fb.com
+DOMAIN-SUFFIX,fb.me
+DOMAIN-SUFFIX,facebookmail.com
+
+# WhatsApp 相关域名
+DOMAIN-SUFFIX,whatsapp.com
+DOMAIN-SUFFIX,whatsapp.net
+DOMAIN-SUFFIX,web.whatsapp.com
+DOMAIN-SUFFIX,api.whatsapp.com
+DOMAIN-SUFFIX,upload.whatsapp.com
+
+# Threads 相关域名
+DOMAIN-SUFFIX,threads.net
+DOMAIN-SUFFIX,threads.com
+DOMAIN-SUFFIX,web.threads.com
+
+# Meta 通用域名（广告、认证）
+DOMAIN-SUFFIX,oculus.com
+DOMAIN-SUFFIX,accountkit.com
+DOMAIN-SUFFIX,instagramads.com
+DOMAIN-SUFFIX,meta.org
+DOMAIN-SUFFIX,whatsappads.com
+
+########################################
+# 🔍 DOMAIN-KEYWORD
+########################################
+DOMAIN-KEYWORD,instagram
+DOMAIN-KEYWORD,fbcdn
+DOMAIN-KEYWORD,whatsapp
+DOMAIN-KEYWORD,threads
+DOMAIN-KEYWORD,meta
+
+########################################
+# 🌎 IP CIDR RANGES (Meta / Instagram / WhatsApp / Threads)
+########################################
+# Facebook / Meta 核心服务器段
+IP-CIDR,31.13.64.0/18,no-resolve
+IP-CIDR,66.220.144.0/20,no-resolve
+IP-CIDR,69.171.224.0/19,no-resolve
+IP-CIDR,157.240.0.0/16,no-resolve
+IP-CIDR,173.252.64.0/18,no-resolve
+IP-CIDR,185.60.216.0/22,no-resolve
+IP-CIDR,204.15.20.0/22,no-resolve
+
+# WhatsApp 服务器段
+IP-CIDR,185.82.216.0/22,no-resolve
+IP-CIDR,69.171.255.0/24,no-resolve
+IP-CIDR,31.13.88.0/22,no-resolve
+IP-CIDR,199.36.158.0/22,no-resolve
+IP-CIDR,104.244.42.0/24,no-resolve
+
+# Threads 和 Facebook 核心服务段
+IP-CIDR,31.13.88.0/22,no-resolve  # 可能用于 Threads 服务
+IP-CIDR,31.13.64.0/18,no-resolve  # Facebook / Meta 核心服务
+
+########################################
+# 🌐 IPv6 CIDR (Meta / Instagram / WhatsApp / Threads)
+########################################
+IP-CIDR6,2a03:2880::/32,no-resolve  # Facebook/Meta IPv6
+IP-CIDR6,2a03:2880:f00d::/48,no-resolve
+IP-CIDR6,2a03:2880:f12f::/48,no-resolve
+IP-CIDR6,2001:67c:4e8::/48,no-resolve  # Meta IPv6
+IP-CIDR6,2a03:2880:f00d:830::/64,no-resolve  # Facebook CDN
+
+########################################
+# ✅ IP ASN (Meta)
+########################################
+IP-ASN,32934,no-resolve  # Meta Platforms, Inc. (Facebook)
+IP-ASN,32934,no-resolve  # Facebook (包括 WhatsApp 和 Instagram 服务)
+
+########################################
+# ✅ 备注
+# - 精确匹配 Meta 生态核心服务流量（Instagram、Facebook、WhatsApp、Threads）
+# - 完全移除第三方域名与营销网站
+# - 支持 IPv4 / IPv6，覆盖全球节点
+# - 除核心 API、媒体服务外，其他域名与 IP 均已剔除
+########################################
