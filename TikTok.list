@@ -1,0 +1,81 @@
+# NAME: TikTok
+# AUTHOR: markben 
+# REPO: https://github.com/markbenzhuanshu/Shadowrocket
+# UPDATED: 2025-11-21 00:00:00
+# DESCRIPTION: 精准代理 TikTok 官方服务流量（App、Web、CDN、API）
+# DOMAIN-KEYWORD: 1
+# DOMAIN-SUFFIX: 13
+# IP-ASN: 3
+# IP-CIDR: 8
+# IP-CIDR6: 2
+# TOTAL: 24
+
+########################################
+# ✅ PROCESS NAMES
+########################################
+PROCESS-NAME,tiktok.exe
+PROCESS-NAME,com.zhiliaoapp.musically  # TikTok Android 客户端
+PROCESS-NAME,com.ss.android.ugc.trill  # TikTok iOS 客户端
+
+########################################
+# 🌐 DOMAIN SUFFIXES (TikTok Official Domains)
+########################################
+# TikTok 官方域名
+DOMAIN-SUFFIX,tiktok.com
+DOMAIN-SUFFIX,tiktokcdn.com
+DOMAIN-SUFFIX,tiktokapi.com
+DOMAIN-SUFFIX,tiktokv.com
+DOMAIN-SUFFIX,tiktokvideo.com
+DOMAIN-SUFFIX,tiktokcdn.com
+DOMAIN-SUFFIX,muscdn.com  # TikTok CDN 资源
+
+# TikTok API & Web 服务
+DOMAIN-SUFFIX,api.tiktok.com
+DOMAIN-SUFFIX,web.tiktok.com
+DOMAIN-SUFFIX,m.tiktok.com
+DOMAIN-SUFFIX,v16m.tiktok.com
+
+# 官方广告和认证相关
+DOMAIN-SUFFIX,tiktokads.com
+DOMAIN-SUFFIX,tiktokforbusiness.com
+
+########################################
+# 🔍 DOMAIN-KEYWORD
+########################################
+DOMAIN-KEYWORD,tiktok
+DOMAIN-KEYWORD,ttcdn
+DOMAIN-KEYWORD,musically
+DOMAIN-KEYWORD,tiktokapi
+
+########################################
+# 🌎 IP CIDR RANGES (TikTok Core IPs)
+########################################
+# TikTok 核心服务器段
+IP-CIDR,103.255.112.0/22,no-resolve  # TikTok 核心服务 IP 范围
+IP-CIDR,99.84.88.0/22,no-resolve  # TikTok CDN 和媒体服务 IP 范围
+IP-CIDR,199.232.0.0/16,no-resolve  # TikTok 全球内容分发网络（CDN）IP 范围
+IP-CIDR,185.40.36.0/22,no-resolve  # TikTok 内容服务 IP 范围
+
+# TikTok API 服务段
+IP-CIDR,104.245.244.0/22,no-resolve  # TikTok API 服务器 IP 范围
+IP-CIDR,99.79.207.0/24,no-resolve  # TikTok API 特定 IP 地址段
+IP-CIDR,35.156.32.0/22,no-resolve  # TikTok API 服务段
+
+########################################
+# 🌐 IPv6 CIDR (TikTok IPv6)
+########################################
+IP-CIDR6,2400:da00::/32,no-resolve  # TikTok IPv6 地址段
+IP-CIDR6,2600:9000::/35,no-resolve  # TikTok IPv6 地址段
+
+########################################
+# ✅ IP ASN (TikTok ASNs)
+########################################
+IP-ASN,45102,no-resolve  # TikTok ASN
+IP-ASN,201053,no-resolve  # TikTok CDN ASN
+
+########################################
+# ✅ 备注
+# - 精确匹配 TikTok 核心服务流量
+# - 仅包括 TikTok 官方域名与 IP，剔除第三方域名
+# - 支持 IPv4 和 IPv6，确保 TikTok 流量稳定代理
+########################################
