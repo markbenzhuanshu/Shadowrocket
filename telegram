@@ -1,30 +1,39 @@
-# Instagram
+# Telegram
 # Ensure all traffic goes through the specified proxy
+
 # Process Names
-# These are the main process names for Instagram.
-# If Instagram uses any other executables or additional processes, include them as well.
-#PROCESS-NAME,Instagram.exe
-#PROCESS-NAME,com.instagram.android  # Android Instagram app
-#PROCESS-NAME,com.instagram.ios  # iOS Instagram app
+# These are the main process names for Telegram.
+# If Telegram uses any other executables or additional processes, include them as well.
+PROCESS-NAME,Telegram.exe  # Windows Telegram app
+PROCESS-NAME,org.telegram.messenger  # Telegram Messenger app (Android)
+PROCESS-NAME,org.telegram.plus  # Telegram Plus app (Android)
+PROCESS-NAME,com.telegram.desktop  # Telegram Desktop app
+PROCESS-NAME,com.telegram  # General Telegram mobile app process name (iOS/Android)
+
 # Domain Suffixes
-# These include common Instagram domains and subdomains related to their service.
-DOMAIN-SUFFIX,instagram.com
-DOMAIN-SUFFIX,instagram.net
-DOMAIN-SUFFIX,fbcdn.net
-DOMAIN-SUFFIX,cdninstagram.com
-DOMAIN-SUFFIX,instagrammedia.com
-DOMAIN-SUFFIX,static.instagram.com
-DOMAIN-SUFFIX,api.instagram.com
-DOMAIN-SUFFIX,upload.instagram.com
+# These include common Telegram domains and subdomains related to their service.
+DOMAIN-SUFFIX,telegram.org  # Telegram's official domain
+DOMAIN-SUFFIX,telegram.me  # Telegram's URL shortener and official domain
+DOMAIN-SUFFIX,telegram.dog  # Telegram-related subdomain
+DOMAIN-SUFFIX,tdesktop.com  # Telegram Desktop domain
+DOMAIN-SUFFIX,telegra.ph  # Telegram's blogging platform domain
+DOMAIN-SUFFIX,telega.one  # Telegram-related service
+DOMAIN-SUFFIX,telegram-cdn.org  # Telegram content delivery network (CDN)
+DOMAIN-SUFFIX,cdn-telegram.org  # Telegram CDN (used for media)
+DOMAIN-SUFFIX,graph.org  # Telegram's Graph API domain
+
 # IP CIDR Ranges
-# Add Instagram's IP ranges to ensure all communication through your proxy.
-IP-CIDR,31.13.64.0/18,no-resolve  # Instagram general IP range
-IP-CIDR,157.240.0.0/16,no-resolve  # Another major Instagram server range
-IP-CIDR,69.171.224.0/20,no-resolve  # Facebook/Instagram server range
-IP-CIDR,69.171.250.0/24,no-resolve  # Specific Instagram server IP range
-IP-CIDR,173.252.64.0/18,no-resolve  # Instagram CDN and media IP range
-IP-CIDR,66.220.144.0/20,no-resolve  # Facebook/Instagram-related IP range
+# Add Telegram's IP ranges to ensure all communication through your proxy.
+IP-CIDR,91.108.0.0/16,no-resolve  # Telegram server IP range
+IP-CIDR,109.239.140.0/24,no-resolve  # Telegram IP range for Europe
+IP-CIDR,149.154.160.0/20,no-resolve  # Telegram IP range (General)
+IP-CIDR,5.28.192.0/18,no-resolve  # Telegram server IP range
+IP-CIDR,149.154.175.0/24,no-resolve  # Telegram related server range
+IP-CIDR,185.133.43.0/24,no-resolve  # Telegram server range (another subnet)
+IP-CIDR,37.48.110.0/22,no-resolve  # Telegram IP range for Russia and surrounding areas
+
 # IPv6 CIDR Ranges
-IP-CIDR6,2a03:2880:f12f:830::/64,no-resolve  # IPv6 Instagram server range
-IP-CIDR6,2a03:2880:f00d:830::/64,no-resolve
-IP-CIDR6,2a03:2880:f00d:831::/64,no-resolve
+IP-CIDR6,2a0a:f280::/29,no-resolve  # Telegram IPv6 address range
+IP-CIDR6,2001:67c:4e8::/48,no-resolve  # Telegram IPv6 address range
+IP-CIDR6,2001:b28:f23c::/47,no-resolve  # Telegram IPv6 range
+IP-CIDR6,2001:b28:f23f::/48,no-resolve  # Telegram IPv6 range
