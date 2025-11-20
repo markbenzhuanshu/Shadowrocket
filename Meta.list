@@ -9,6 +9,49 @@
 # IP-CIDR: 15
 # IP-CIDR6: 5
 # TOTAL: 58
+# ===============================================
+# 防泄漏增强模板 v1.0 (for Meta / Telegram / TikTok)
+# 作者：markben（优化 by GPT-5）
+# 功能：防止 DNS 泄漏 + WebRTC 泄漏
+# 更新时间：2025-11-21 00:30:00
+# ===============================================
+
+########################################
+# 🧱 DNS 泄漏防护
+########################################
+# 使用加密 DNS (DoH)
+# 若客户端支持 DNS over HTTPS/HTTP3，请启用下方 DoH 服务
+[DNS]
+dns-server = https://1.1.1.1/dns-query, https://8.8.8.8/dns-query, https://9.9.9.9/dns-query
+prefer-doh = true
+no-system = true
+dns-fallback-proxy = true
+
+########################################
+# ⚔️ WebRTC 泄漏防护
+########################################
+# 拦截 STUN / TURN / WebRTC 信令
+DOMAIN-SUFFIX,stun.l.google.com,REJECT
+DOMAIN-KEYWORD,stun,REJECT
+DOMAIN-SUFFIX,webrtc.org,REJECT
+DOMAIN-SUFFIX,turn.cn,REJECT
+DOMAIN-SUFFIX,stun.services.mozilla.com,REJECT
+DOMAIN-SUFFIX,stun.xten.com,REJECT
+DOMAIN-SUFFIX,stun.voiparound.com,REJECT
+DOMAIN-SUFFIX,stun.voipbuster.com,REJECT
+DOMAIN-SUFFIX,stun.voipstunt.com,REJECT
+DOMAIN-SUFFIX,stun.counterpath.net,REJECT
+DOMAIN-SUFFIX,stun.ipvideotalk.com,REJECT
+DOMAIN-SUFFIX,stun.fwdnet.net,REJECT
+DOMAIN-SUFFIX,stun.callwithus.com,REJECT
+DOMAIN-SUFFIX,stun.nextcloud.com,REJECT
+
+########################################
+# 🧰 IPv6 控制（可选）
+########################################
+# 如果你 IPv6 网络质量差，可禁用本地 IPv6，防止泄漏
+# disable-ipv6 = true
+
 
 ########################################
 # ✅ PROCESS NAMES
